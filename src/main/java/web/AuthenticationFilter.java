@@ -29,7 +29,6 @@ public class AuthenticationFilter implements Filter {
             System.out.println("Unauthorized access request");
             res.sendRedirect("login.html");
         } else {
-            // pass the request along the filter chain
             chain.doFilter(request, response);
         }
 

@@ -20,7 +20,6 @@ public class UserServiceImpl implements UserService {
         return repository.save(user);
     }
 
-
     @Override
     public User getByEmailAndPassword(String email, String password){
         return checkNotFound(repository.getByEmailAndPassword(email , password), "email=" + email + ", password=" + password);

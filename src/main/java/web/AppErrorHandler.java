@@ -22,7 +22,6 @@ public class AppErrorHandler extends HttpServlet {
 
     private void processError(HttpServletRequest request,
                               HttpServletResponse response) throws IOException {
-        // Analyze the servlet exception
         Throwable throwable = (Throwable) request
                 .getAttribute("javax.servlet.error.exception");
         Integer statusCode = (Integer) request
@@ -38,7 +37,6 @@ public class AppErrorHandler extends HttpServlet {
             requestUri = "Unknown";
         }
 
-        // Set response content type
         response.setContentType("text/html");
 
         PrintWriter out = response.getWriter();
