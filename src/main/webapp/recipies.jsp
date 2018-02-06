@@ -12,7 +12,6 @@
 <section>
     <h3><a href="home.jsp">Home</a></h3>
     <h2>Recipe</h2>
-    <%--<a href="meals?action=create">Add Meal</a>--%>
     <hr/>
 
     <form method="post" action="recipies?action=getByName">
